@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    background-color: hsl(11, 91%, 87%);
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+
+}
+
+.attribution{
+    position: absolute;
+    bottom:0;
+}
+.container {
+    min-width: 350px;
+    width: 80%; /* Utilisation de 80% de la largeur de l'écran */
+    max-width: 400px; /* Ajout d'une limite de largeur maximale */
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+
+.head{
+    background-color:  hsl(10, 79%, 65%);
+    height:58px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 22px;
+    width: 80%;
+}
+
+.content{
+    background-color: white;
+    border-radius: 22px;
+    padding: 20px;
+    width: 80%;
+
+}
+
+.headLeft{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: white;
+    
+}
+
+.balance{
+    font-size: 18px;
+}
+.headAmount{
+    font-size: 25px;
+    font-weight: 600;
+}   
+.headRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.white{
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left:-18px;
+    border:white 2px solid;
+
+}
+.black{
+    background-color: rgb(56, 50, 50);
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.contentTitle{
+    text-align: center;
+    
+}
+
+.chart{
+    display: flex;
+    column-gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(85, 85, 85);
+    margin-bottom: 10px;
+    width: 100%;
+    height: 10vmin;
+}
+
+.framy{
+    display: flex;
+    flex-direction: column;  
+    width: 40px;
+    position: relative;
+}
+
+.bar{
+    width: 100%;
+    background-color:  hsl(10, 79%, 65%);
+    height: 50px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: -20px;
+}
+.day{
+    width: 100%;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    color:rgb(96, 95, 95);
+    font-weight: 700;
+    position: absolute;
+    bottom: -40px; /* Décalage vers le haut pour placer les noms des jours sous les barres */
+    left: 0;  
+
+}
+
+.totalTitle{
+    margin-top: 10px;
+    color: hsl(28, 10%, 53%)
+}
+.foot{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.footRight{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.footLeft{
+    font-size: 30px;
+}
+.percent{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+.fromMonth{
+    font-size: 17px;
+    color: hsl(28, 10%, 53%);
+
+}
+
+@media screen and (max-width:376px){
+    .chart{
+        display: flex;
+        column-gap: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 2px solid rgb(85, 85, 85);
+        margin-bottom: 20px;
+        width: 100%;
+        height: 10vmin;
+    }
+}
+
+@media screen and (max-width:415px){
+    .chart{
+        display: flex;
+        column-gap: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 2px solid rgb(85, 85, 85);
+        margin-bottom: 20px;
+        width: 100%;
+        height: 20vmin;
+    }
+}
+
+@media screen and (min-width:281px){
+    .chart{
+        display: flex;
+        column-gap: 16px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 2px solid rgb(85, 85, 85);
+        margin-bottom: 20px;
+        width: 100%;
+        height: 15vmin;
+    }
+}
