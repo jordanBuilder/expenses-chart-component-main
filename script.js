@@ -66,14 +66,33 @@ fetch("data.json")
       const dayIndex = jsDays.indexOf(ourDays[index]);
       let barsArray = Array.from(bars);
       for (let index = 0; index < barsArray.length; index++) {
+        barsArray[index].setAttribute('data-amount',amounts[index]);
         barsArray[index].style.height = amounts[index]+"px";
       }
       if (dayIndex === day) {
         bar.style.backgroundColor = "rgb(15, 147, 147)";
       }
-    });
+      bar.addEventListener('mouseover',()=>{
+        const amount = bar.getAttribute('data-amount');
+
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent  = amount;
+
+        bar.appendChild(tooltip);
+      });
+
+      bar.addEventListener('mouseout',()=>{
+        const tooltip = bar.querySelector('.tooltip');
+        if (tooltip) {
+          bar.removeChild(tooltip);
+        }
+      }
+      
+    );
   })
   .catch((error) => {
     // ici on logguera les erreurs liées à l'utilisation de la promesse dans le second then
     console.error("Erreur: ", error);
   });
+});
